@@ -6,34 +6,34 @@ using System.Threading.Tasks;
 
 namespace Controlador
 {
-    class ControladorBanner
+    class ControladorCampania
     {
         /*DAOFactory iFactory; 
-        private static ControladorBanner iInstancia = null;
+        private static ControladorCampania iInstancia = null;
 
-         public static ControladorBanner Instancia
+         public static ControladorCampania Instancia
          {
              if iInstancia == null
                  {
                        if (iInstancia == null)
                  {
-                     iInstancia = new ControladorCuenta();
+                     iInstancia = new ControladorCampania();
                  }
                      return iInstanciaControlador;
                  }
 
          }
-         public Banner CrearBanner(string pNombre, Date pHoraInicio, Date pHoraFin, Date pFechaInicio, Date pFechaFin)
+         public Campania CrearCampania(string pNombre, Date pHoraInicio, Date pHoraFin, Date pFechaInicio, Date pFechaFin)
          { 
 
          }
          
-         public void ModificarBanner(BannerDTO pBanner)
+         public void ModificarCampania(CampaniaDTO pCampania)
          { 
 
          }
 
-         public void EliminarBanner (BannerDTO pBanner)
+         public void EliminarCampania (CampaniaDTO pCampania)
          { 
 
          }
