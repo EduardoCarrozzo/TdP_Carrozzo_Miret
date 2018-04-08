@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBannerDAO.cs" />
     <Compile Include="PersistenciaSQLServer\SQLServerBannerDAO.cs" />
+    <Compile Include="PersistenciaSQLServer\SQLServerCampaniaDAO.cs" />
+    <Compile Include="PersistenciaSQLServer\SQLServerFuenteDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
