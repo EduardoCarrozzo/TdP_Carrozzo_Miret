@@ -9,13 +9,10 @@ namespace Persistencia
     interface IBannerDAO
     {
         /*
-        void Inserar(BannerDTO pBanner);
-
-        BannerDTO Buscar(int pIdBanner);
-
-        void Modificar(int pIdBanner, BannerDTO pBanner);
-
-        void Eliminar(int pIdBanner);
+        public void Insertar(BannerDTO pBanner);
+        public void BannerDTO Buscar(int pIdBanner);
+        public void Modificar(int pIdBanner, BannerDTO pBanner);
+        public void Eliminar(int pIdBanner);
         */
     }
 }

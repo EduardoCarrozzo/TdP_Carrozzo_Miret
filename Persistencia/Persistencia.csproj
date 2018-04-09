@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IBannerDAO.cs" />
+    <Compile Include="ICampaniaDAO.cs" />
+    <Compile Include="IFuenteDAO.cs" />
     <Compile Include="PersistenciaSQLServer\SQLServerBannerDAO.cs" />
     <Compile Include="PersistenciaSQLServer\SQLServerCampaniaDAO.cs" />
     <Compile Include="PersistenciaSQLServer\SQLServerFuenteDAO.cs" />
