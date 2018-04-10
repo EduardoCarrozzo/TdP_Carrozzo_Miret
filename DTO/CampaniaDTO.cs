@@ -11,11 +11,15 @@ namespace DTO
         private int iIdCampania;
         private string iNombre;
         private bool iEstado;
+        private List<RangoFechaDTO> iRangoFecha;
+        //private List<Image> iImagen;
 
-        public CampaniaDTO(int pIdCampania, string pNombre, bool pEstado)
+        public CampaniaDTO(int pIdCampania, string pNombre, List<RangoFechaDTO> pRangoFecha, bool pEstado) //, imagen) 
         {
             this.iIdCampania = pIdCampania;
             this.iNombre = pNombre;
+            this.iRangoFecha = pRangoFecha;
+            //this.iImagen = pImagen;
             this.iEstado = pEstado;
         }
 
@@ -31,6 +35,18 @@ namespace DTO
             set { this.iNombre = value; }
         }
 
+        public List<RangoFechaDTO> RangoFecha
+        {
+            get { return this.iRangoFecha; }
+            set { this.iRangoFecha = value; }
+        }
+
+        /* public Imagen
+         * {
+         *      
+         * }
+
+        */
         public bool Estado
         {
             get { return this.iEstado; }
