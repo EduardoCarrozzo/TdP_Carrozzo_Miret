@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class RangoHorarioDTO
+    public class RangoHorarioDTO
     {
         private int iIdRangoHorario;
         private TimeSpan iHoraInicio;

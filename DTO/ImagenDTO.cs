@@ -8,5 +8,6 @@ namespace DTO
 {
     class ImagenDTO
     {
+        private Image iIdImagen;
     }
 }

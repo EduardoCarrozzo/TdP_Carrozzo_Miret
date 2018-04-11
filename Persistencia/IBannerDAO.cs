@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO;
 
 namespace Persistencia
 {
     interface IBannerDAO
     {
-        /*
-        public void Insertar(BannerDTO pBanner);
-        public void BannerDTO Buscar(int pIdBanner);
-        public void Modificar(int pIdBanner, BannerDTO pBanner);
-        public void Eliminar(int pIdBanner);
-        */
+        void Insertar(BannerDTO pBanner);
+        BannerDTO Buscar(int pIdBanner);
+        void Modificar(int pIdBanner, BannerDTO pBanner);
+        void Eliminar(int pIdBanner);
     }
 }

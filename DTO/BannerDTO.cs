@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class BannerDTO
+    public class BannerDTO
     {
         private int iIdBanner;
         private string iNombre;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class RSSDTO : IFuenteDTO
+    public class RSSDTO : IFuenteDTO
     {
         private string iUrl;
         private string iDescripcion;

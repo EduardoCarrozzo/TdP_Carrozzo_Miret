@@ -6,27 +6,27 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class CampaniaDTO
+    public class CampaniaDTO
     {
         private int iIdCampania;
         private string iNombre;
         private bool iEstado;
         private List<RangoFechaDTO> iRangoFecha;
-        //private List<Image> iImagen;
+        private List<ImagenDTO> iImagenes;
 
-        public CampaniaDTO(int pIdCampania, string pNombre, List<RangoFechaDTO> pRangoFecha, bool pEstado) //, imagen) 
+        public CampaniaDTO(int pIdCampania, string pNombre, List<RangoFechaDTO> pRangoFecha, List<ImagenDTO> pImagenes, bool pEstado) //, imagen) 
         {
             this.iIdCampania = pIdCampania;
             this.iNombre = pNombre;
             this.iRangoFecha = pRangoFecha;
-            //this.iImagen = pImagen;
+            this.iImagenes = pImagenes;
             this.iEstado = pEstado;
         }
 
         public int IdCampania
         {
             get { return this.iIdCampania; }
-            set { this.IdCampania = value}
+            set { this.IdCampania = value; }
         }
 
         public string Nombre
@@ -41,12 +41,13 @@ namespace DTO
             set { this.iRangoFecha = value; }
         }
 
-        /* public Imagen
-         * {
-         *      
-         * }
+        public List<ImagenDTO> Imagen
+        {
+            get { return this.iImagenes; }
+            set { this.iImagenes = value; }
+        }
 
-        */
+        
         public bool Estado
         {
             get { return this.iEstado; }

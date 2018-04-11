@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    interface IFuenteDTO : IEquatable<IFuenteDTO>
+    public interface IFuenteDTO : IEquatable<IFuenteDTO>
     {
         /// <summary>
         /// Texto de la fuente

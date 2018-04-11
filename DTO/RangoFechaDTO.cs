@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class RangoFechaDTO
+    public class RangoFechaDTO
     {
         private int iIdRangoFecha;
         private DateTime iFechaInicio;

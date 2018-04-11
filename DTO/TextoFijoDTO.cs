@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class TextoFijoDTO : IFuenteDTO
+    public class TextoFijoDTO : IFuenteDTO
     {
         private string iValor;
         private int iCodigo;
