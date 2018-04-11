@@ -40,11 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAOFactory.cs" />
     <Compile Include="IBannerDAO.cs" />
     <Compile Include="ICampaniaDAO.cs" />
     <Compile Include="IFuenteDAO.cs" />
     <Compile Include="PersistenciaSQLServer\SQLServerBannerDAO.cs" />
     <Compile Include="PersistenciaSQLServer\SQLServerCampaniaDAO.cs" />
+    <Compile Include="PersistenciaSQLServer\SQLServerDAOFactory.cs" />
     <Compile Include="PersistenciaSQLServer\SQLServerFuenteDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

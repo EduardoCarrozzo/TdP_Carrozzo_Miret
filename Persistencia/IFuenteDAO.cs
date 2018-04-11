@@ -7,7 +7,7 @@ using DTO;
 
 namespace Persistencia
 {
-    interface IFuenteDAO
+    public interface IFuenteDAO
     {
         void Insertar(IFuenteDTO pFuente);
         IFuenteDTO Buscar(int pIdFuente);

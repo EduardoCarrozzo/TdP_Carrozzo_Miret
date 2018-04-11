@@ -7,7 +7,7 @@ using DTO;
 
 namespace Persistencia
 {
-    interface ICampaniaDAO
+    public interface ICampaniaDAO
     {
         void Insertar(CampaniaDTO pCampania);
         CampaniaDTO Buscar(int pIdCampania);
