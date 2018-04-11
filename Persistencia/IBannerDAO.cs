@@ -7,7 +7,7 @@ using DTO;
 
 namespace Persistencia
 {
-    interface IBannerDAO
+    public interface IBannerDAO
     {
         void Insertar(BannerDTO pBanner);
         BannerDTO Buscar(int pIdBanner);
