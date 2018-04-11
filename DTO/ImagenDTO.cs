@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class ImagenDTO
+    public class ImagenDTO
     {
         private Image iIdImagen;
     }
