@@ -27,7 +27,16 @@ namespace Persistencia.PersistenciaSQLServer
 
         public override void IniciarConexion()
         {
-            throw new NotImplementedException();
+            try
+            {
+                SqlConnection conexion = new SqlConnection(iCadenaConexion);
+                conexion.Open();
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.Message);
+                throw new DAOException("No se pudo conectar a la base de datos");
+            }
         }
 
     }

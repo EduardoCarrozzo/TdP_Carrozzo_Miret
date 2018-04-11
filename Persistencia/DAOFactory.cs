@@ -12,6 +12,9 @@ namespace Persistencia
     {
         private static DAOFactory iInstanciaDAO = null;
 
+
+        //Verifica si hay una instancia ya creada y en caso de que no lo esté
+        //crea una nueva. Para que solo haya una
         public static DAOFactory Instancia()
         {
             if (iInstanciaDAO == null)
