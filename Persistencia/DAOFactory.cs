@@ -29,7 +29,11 @@ namespace Persistencia
 
         public abstract void ComenzarTransaccion();
 
+        public abstract void Commit();
 
+        public abstract void RollBack();
+
+        public abstract void FinalizarConexion();
     }
 
 }
