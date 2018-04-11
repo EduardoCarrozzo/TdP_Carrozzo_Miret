@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAOException.cs" />
     <Compile Include="DAOFactory.cs" />
     <Compile Include="IBannerDAO.cs" />
     <Compile Include="ICampaniaDAO.cs" />
