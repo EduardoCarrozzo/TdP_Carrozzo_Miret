@@ -10,7 +10,7 @@ namespace Persistencia.PersistenciaSQLServer
 {
     class SQLServerCampaniaDAO : ICampaniaDAO
     {
-        private SqlCommand iTransaccion = null;
+        private SqlTransaction iTransaccion = null;
         private SqlConnection iConexion;
 
         public SQLServerCampaniaDAO (SqlConnection pConexion, SqlCommand pTransaccion)
