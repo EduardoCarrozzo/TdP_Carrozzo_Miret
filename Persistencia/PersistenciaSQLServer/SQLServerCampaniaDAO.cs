@@ -36,7 +36,7 @@ namespace Persistencia.PersistenciaSQLServer
 
         public CampaniaDTO Buscar(int pIdCampania) {}
 
-        public void Modificar(int pIdCampania, CampaniaDTO pCampania) {}
+        public void Modificar(CampaniaDTO pCampania) {}
 
         public void Eliminar(int pIdCampania) {}
         

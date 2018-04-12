@@ -11,7 +11,7 @@ namespace Persistencia
     {
         void Insertar(CampaniaDTO pCampania);
         CampaniaDTO Buscar(int pIdCampania);
-        void Modificar(int pIdCampania, CampaniaDTO pCampania);
+        void Modificar(CampaniaDTO pCampania);
         void Eliminar(int pIdCampania);
     }
 }

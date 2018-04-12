@@ -11,7 +11,7 @@ namespace Persistencia
     {
         void Insertar(IFuenteDTO pFuente);
         IFuenteDTO Buscar(int pIdFuente);
-        void Modificar(int pIdFuente, IFuenteDTO pFuente);
+        void Modificar(IFuenteDTO pFuente);
         void Eliminar(int pIdFuente);
     }
 }

@@ -11,7 +11,7 @@ namespace Persistencia
     {
         void Insertar(BannerDTO pBanner);
         BannerDTO Buscar(int pIdBanner);
-        void Modificar(int pIdBanner, BannerDTO pBanner);
+        void Modificar(BannerDTO pBanner);
         void Eliminar(int pIdBanner);
     }
 }
