@@ -28,6 +28,8 @@ namespace Persistencia
 
         public abstract ICampaniaDAO CampaniaDAO();
 
+        public abstract IFuenteDAO FuenteDAO();
+
         public abstract void IniciarConexion();
 
         public abstract void ComenzarTransaccion();
