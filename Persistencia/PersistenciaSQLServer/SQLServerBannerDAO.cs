@@ -30,7 +30,7 @@ namespace Persistencia.PersistenciaSQLServer
                 comando.CommandText = "Insert into Banner(Nombre, Estado, Fuente) values(@pNombre, @pEstado, @pFuente)";
                 comando.Parameters.AddWithValue("@pNombre", pBanner.Nombre);
                 comando.Parameters.AddWithValue("@Estado", pBanner.Estado);
-                comando.Parameters.AddWithValue("Fuente", pBanner.Fuente);
+                comando.Parameters.AddWithValue("@Fuente", pBanner.Fuente);
                 comando.Transaction = iTransaccion;
                 comando.ExecuteNonQuery();
             }
@@ -54,7 +54,7 @@ namespace Persistencia.PersistenciaSQLServer
             //}
             //catch(SqlException)
             //{
-
+                                    
             //}
         }
           
@@ -62,7 +62,8 @@ namespace Persistencia.PersistenciaSQLServer
         {
             try
             {
-
+                SqlCommand comando = this.iConexion.CreateCommand();
+                comando.CommandText = "Update Banner set Nombre = '"+pBanner.Nombre+"' where IdBanner ="+pBanner.IdBanner;
             }
             catch(SqlException)
             {
@@ -72,6 +73,15 @@ namespace Persistencia.PersistenciaSQLServer
           
         public void Eliminar(int pIdBanner)
         {
+            try
+            {
+                SqlCommand comando = this.iConexion.CreateCommand();
+                comando.CommandText = "Update Banner set Estado = 'false' where IdBanner = "+pIdBanner;
+            }
+            catch(SqlException)
+            {
+                throw new DAOException("No se ha podido eliminar el Banner");
+            }
 
         }
          
