@@ -13,7 +13,7 @@ namespace Persistencia.PersistenciaSQLServer
         private SqlCommand iTransaccion = null;
         private SqlConnection iConexion;
 
-        public SQLServerCampaniaDAO (SqlCommand pTransaccion, SqlConnection pConexion)
+        public SQLServerCampaniaDAO (SqlConnection pConexion, SqlCommand pTransaccion)
         {
             this.iTransaccion = pTransaccion;
             this.iConexion = pConexion;
@@ -23,7 +23,10 @@ namespace Persistencia.PersistenciaSQLServer
         {
             try
             {
-
+            //    string pNombre = pCampania.Nombre;
+            //  int pEstado = 1;
+            //    string cmd = "insert into Campania (nombre, estado) values ";
+            //    SqlCommand comando = new SqlCommand();
             }
             catch
             {
