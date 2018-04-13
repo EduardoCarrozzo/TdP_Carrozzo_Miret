@@ -9,7 +9,7 @@ namespace Persistencia
 {
     public interface IBannerDAO
     {
-        void Insertar(BannerDTO pBanner);
+        void Agregar(BannerDTO pBanner);
         BannerDTO Buscar(int pIdBanner);
         void Modificar(BannerDTO pBanner);
         void Eliminar(int pIdBanner);

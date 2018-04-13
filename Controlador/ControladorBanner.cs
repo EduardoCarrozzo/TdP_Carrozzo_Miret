@@ -23,7 +23,7 @@ namespace Controlador
                  }
 
          }
-         public Banner CrearBanner(string pNombre, Date pHoraInicio, Date pHoraFin, Date pFechaInicio, Date pFechaFin)
+         public Banner AgregarBanner(string pNombre, Date pHoraInicio, Date pHoraFin, Date pFechaInicio, Date pFechaFin)
          { 
 
          }

@@ -9,7 +9,7 @@ namespace Persistencia
 {
     public interface ICampaniaDAO
     {
-        void Insertar(CampaniaDTO pCampania);
+        void Agregar(CampaniaDTO pCampania);
         CampaniaDTO Buscar(int pIdCampania);
         void Modificar(CampaniaDTO pCampania);
         void Eliminar(int pIdCampania);

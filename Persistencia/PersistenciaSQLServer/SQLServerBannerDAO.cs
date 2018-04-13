@@ -22,7 +22,7 @@ namespace Persistencia.PersistenciaSQLServer
 
 
         //La PK se autoincrementa en la base de datos, no es necesario pasarla
-        public void Insertar(BannerDTO pBanner)
+        public void Agregar(BannerDTO pBanner)
         {
             try
             {

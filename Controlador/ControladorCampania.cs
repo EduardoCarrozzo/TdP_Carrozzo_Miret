@@ -23,7 +23,7 @@ namespace Controlador
                  }
 
          }
-         public Campania CrearCampania(string pNombre, Date pHoraInicio, Date pHoraFin, Date pFechaInicio, Date pFechaFin)
+         public Campania AgregarCampania(string pNombre, Date pHoraInicio, Date pHoraFin, Date pFechaInicio, Date pFechaFin)
          { 
 
          }

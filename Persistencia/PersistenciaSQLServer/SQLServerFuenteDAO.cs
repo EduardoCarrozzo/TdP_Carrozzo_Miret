@@ -19,7 +19,7 @@ namespace Persistencia.PersistenciaSQLServer
             this.iTransaccion = pTransaccion;
         }
 
-        public void Insertar(IFuenteDTO pFuente) {}
+        public void Agregar(IFuenteDTO pFuente) {}
           
         public IFuenteDTO Buscar(int pIdFuente) {}
           

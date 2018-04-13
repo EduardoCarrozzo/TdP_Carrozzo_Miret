@@ -10,7 +10,7 @@ namespace Persistencia.PersistenciaSQLServer
 {
     class SQLServerCampaniaDAO : ICampaniaDAO
     {
-        private SqlTransaction iTransaccion = null;
+        private SqlCommand iTransaccion = null;
         private SqlConnection iConexion;
 
         public SQLServerCampaniaDAO (SqlConnection pConexion, SqlCommand pTransaccion)
@@ -19,7 +19,7 @@ namespace Persistencia.PersistenciaSQLServer
             this.iConexion = pConexion;
         }
 
-        public void Insertar(CampaniaDTO pCampania)
+        public void Agregar(CampaniaDTO pCampania)
         {
             try
             {

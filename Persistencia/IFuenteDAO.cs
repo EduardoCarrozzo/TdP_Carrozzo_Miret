@@ -9,7 +9,7 @@ namespace Persistencia
 {
     public interface IFuenteDAO
     {
-        void Insertar(IFuenteDTO pFuente);
+        void Agregar(IFuenteDTO pFuente);
         IFuenteDTO Buscar(int pIdFuente);
         void Modificar(IFuenteDTO pFuente);
         void Eliminar(int pIdFuente);
