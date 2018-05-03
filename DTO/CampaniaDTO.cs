@@ -14,7 +14,7 @@ namespace DTO
         private List<RangoFechaDTO> iRangoFecha;
         private List<ImagenDTO> iImagenes;
 
-        public CampaniaDTO(int pIdCampania, string pNombre, List<RangoFechaDTO> pRangoFecha, List<ImagenDTO> pImagenes, bool pEstado) //, imagen) 
+        public CampaniaDTO(int pIdCampania, string pNombre, List<RangoFechaDTO> pRangoFecha, List<ImagenDTO> pImagenes, bool pEstado) 
         {
             this.iIdCampania = pIdCampania;
             this.iNombre = pNombre;

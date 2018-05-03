@@ -11,7 +11,7 @@ namespace Persistencia.PersistenciaSQLServer
     {
         SqlConnection iConexion;
         SqlTransaction iTransaccion;
-        private String iCadenaConexion = "Data Source = GIULIANA\\SQLEXPRESS;Initial Catalog = Taller; Integrated Security =True";
+        private string iCadenaConexion = "Data Source = GIULIANA\\SQLEXPRESS;Initial Catalog = Taller; Integrated Security =True";
 
         public override IBannerDAO BannerDAO()
         {

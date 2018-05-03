@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,10 +47,12 @@
     <Compile Include="IBannerDAO.cs" />
     <Compile Include="ICampaniaDAO.cs" />
     <Compile Include="IFuenteDAO.cs" />
+    <Compile Include="IImagenDAO.cs" />
     <Compile Include="PersistenciaSQLServer\SQLServerBannerDAO.cs" />
     <Compile Include="PersistenciaSQLServer\SQLServerCampaniaDAO.cs" />
     <Compile Include="PersistenciaSQLServer\SQLServerDAOFactory.cs" />
     <Compile Include="PersistenciaSQLServer\SQLServerFuenteDAO.cs" />
+    <Compile Include="PersistenciaSQLServer\SQLServerImagenDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
