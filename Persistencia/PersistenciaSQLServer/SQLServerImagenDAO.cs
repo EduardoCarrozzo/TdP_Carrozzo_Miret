@@ -15,7 +15,14 @@ namespace Persistencia.PersistenciaSQLServer
 {
     class SQLServerImagenDAO : IImagenDAO
     {
-        bool Agregar(string nombre, PictureBox pb)
+        SqlConnection iConexion;
+        SqlTransaction iTransaccion = null;
+        SQLServerImagenDAO (SqlConnection pConexion, SqlTransaction pTransaccion)
+        {
+            this.iConexion = pConexion;
+            this.iTransaccion = pTransaccion;  }
+
+        bool Agregar(string nombre, PictureBox pb)// hay que mandar un ImagenDTO como parametro, el pasaje se hace en la vista
         {
             
             SqlCommand cmd = new SqlCommand("insert into imagen values (@nombre, @imagen)", con);
