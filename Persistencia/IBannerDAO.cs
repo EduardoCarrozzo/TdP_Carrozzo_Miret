@@ -10,7 +10,7 @@ namespace Persistencia
     public interface IBannerDAO
     {
         void Agregar(BannerDTO pBanner);
-        BannerDTO Buscar(int pIdBanner);
+        List<BannerDTO> Buscar(string pNombre);
         void Modificar(BannerDTO pBanner);
         void Eliminar(int pIdBanner);
     }
