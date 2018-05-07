@@ -24,6 +24,12 @@ namespace DTO
             set { this.iUrl = value; }
         }
 
+        public string Descripcion
+        {
+            get { return this.iDescripcion; }
+            set { this.iDescripcion = value; }
+        }
+
         public string Valor
         {
             get { return this.iValor; }
@@ -35,7 +41,6 @@ namespace DTO
             get { return this.iCodigo; }
             set { this.iCodigo = value; }
         }
-
 
 
         public string Texto()

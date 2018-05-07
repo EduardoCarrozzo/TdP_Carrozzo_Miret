@@ -39,25 +39,38 @@ namespace Persistencia.PersistenciaSQLServer
                 throw new DAOException("No se pudo insertar el Banner en la base de datos");
             }
         }
-         
-        public BannerDTO Buscar(int pIdBanner)
+
+        public List<BannerDTO> Buscar(string pNombre)
         {
-            //try
-            //{
-            //    SqlCommand comando = this.iConexion.CreateCommand();
-            //    comando.CommandText = "Select * from Banner where IdBanner ="+ pIdBanner;
-            //    SqlDataReader registro = comando.ExecuteReader();
-            //    String pNombre = registro["Nombre"].ToString();
-            //    int pId = Convert.ToInt32(registro["IdBanner"]);
-            //    BannerDTO banner = new BannerDTO();
-            //    return banner;
-            //}
-            //catch(SqlException)
-            //{
-                                    
-            //}
+            try
+            {
+                SqlCommand comando = this.iConexion.CreateCommand();
+                comando.CommandText = "Select * from Banner where Nombre =" + pNombre + "and Estado = true";
+                SqlDataReader registros = comando.ExecuteReader();
+                List<BannerDTO> listaB = new List<BannerDTO>();
+                BannerDTO banner = null;
+                while (registros.Read())
+                {
+                    //Tengo los id de la fuente y Rango fecha. Tengo que buscarlos
+                    //por id en las tablas para pasarlo en el banner
+                    //registros["Fuente"] esto es el id (int) de la Fuente
+                    banner = new BannerDTO(Convert.ToInt32(registros["IdBanner"]), registros["Nombre"].ToString(), registros["RangoFecha"], registros["Fuente"], Convert.ToBoolean(registros["Estado"]));
+                    listaB.Add(banner)
+                }
+
+
+                String nombre = registro["Nombre"].ToString();
+                int id = Convert.ToInt32(registro["IdBanner"]);
+                //List<RangoFechaDTO> rFechas = 
+                //BannerDTO banner = new BannerDTO(id, nombre, );
+                //return banner;
+            }
+            catch (SqlException)
+            {
+
+            }
         }
-          
+
         public void Modificar(BannerDTO pBanner)
         {
             try
