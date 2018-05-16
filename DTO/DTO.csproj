@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="BannerDTO.cs" />
     <Compile Include="CampaniaDTO.cs" />
-    <Compile Include="IFuenteDTO.cs" />
+    <Compile Include="FuenteDTO.cs" />
     <Compile Include="ImagenDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RangoFechaDTO.cs" />

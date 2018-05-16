@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class TextoFijoDTO : IFuenteDTO
+    public class TextoFijoDTO : FuenteDTO
     {
         private string iValor;
         private int iCodigo;
@@ -16,13 +16,7 @@ namespace DTO
 
         }
 
-        public int Codigo
-        {
-            get { return this.iCodigo; }
-            set { this.iCodigo = value; }
-        }
-
-        public string Valor
+        override public string Valor
         {
             get { return this.iValor; }
             set { this.iValor = value; }
@@ -32,7 +26,7 @@ namespace DTO
         {
             return this.iValor;
         }
-        
+
 
         public bool Actualizable()
         {
@@ -44,7 +38,7 @@ namespace DTO
 
         }
 
-        public bool Equals(IFuenteDTO other)
+        public bool Equals(FuenteDTO other)
         {
             return (other.GetType() == this.GetType()) && (this.Codigo == other.Codigo);
         }

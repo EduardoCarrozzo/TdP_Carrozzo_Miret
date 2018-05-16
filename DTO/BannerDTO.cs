@@ -11,10 +11,10 @@ namespace DTO
         private int iIdBanner;
         private string iNombre;
         private bool iEstado;
-        private IFuenteDTO iFuente;
+        private FuenteDTO iFuente;
         private List<RangoFechaDTO> iRangoFecha;
 
-        public BannerDTO(int pIdBanner, string pNombre, List<RangoFechaDTO> pRangoFecha,IFuenteDTO pFuente , bool pEstado)
+        public BannerDTO(int pIdBanner, string pNombre, List<RangoFechaDTO> pRangoFecha,FuenteDTO pFuente , bool pEstado)
         {
             this.iIdBanner = pIdBanner;
             this.iNombre = pNombre;
@@ -42,7 +42,7 @@ namespace DTO
             set { this.iEstado = value; }
         }
 
-        public IFuenteDTO Fuente
+        public FuenteDTO Fuente
         {
             get { return this.iFuente; }
             set { this.iFuente = value; }

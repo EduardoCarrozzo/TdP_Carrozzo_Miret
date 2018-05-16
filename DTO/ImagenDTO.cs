@@ -11,6 +11,7 @@ namespace DTO
         private int iIdImagen;
         private string iNombre;
         private byte iHash;
+        private bool iEstado;
 
         public int IdImagen
         {
@@ -28,6 +29,20 @@ namespace DTO
         {
             get { return this.iHash; }
             set { this.iHash = value; }
+        }
+
+        public bool Estado
+        {
+            get { return this.iEstado; }
+            set { this.iEstado = value; }
+        }
+
+        public ImagenDTO(int pIdImagen, string pNombre, byte pHash, bool pEstado)
+        {
+            this.iIdImagen = pIdImagen;
+            this.iNombre = pNombre;
+            this.iHash = pHash;
+            this.iEstado = pEstado;
         }
     }
 }

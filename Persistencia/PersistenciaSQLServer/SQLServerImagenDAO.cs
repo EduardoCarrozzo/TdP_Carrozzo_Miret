@@ -66,7 +66,33 @@ namespace Persistencia.PersistenciaSQLServer
                
         }
 
-        public void Buscar()
+        public void Modificar(ImagenDTO pImagen)
+        {
+            try
+            {
+                SqlCommand comando = this.iConexion.CreateCommand();
+                comando.CommandText = @"update imagen set nombre=@nombre, imagen=@imagen where id=" + pImagen.IdImagen; //sentencia de actualizacion
+                comando.Parameters.Add("@Hash", SqlDbType.Image);        //agregamos el parametro del tipo compatible con SQL Image
+                comando.Parameters.Add("@Nombre", SqlDbType.NVarChar);      //agregamos el parametro del tipo compatible con SQL NVarChar
+                comando.Parameters["@Nombre"].Value = pImagen.Nombre;       //agregamos el valor del objeto al parametro
+                comando.Parameters["@Hash"].Value = pImagen.Hash;       //agregamos el valor del objeto al parametro
+                comando.Transaction = this.iTransaccion;       // agregamos la transaccion
+                comando.ExecuteNonQuery();      //ejecutamos la sentencia
+            }
+            catch (SqlException)
+            {
+                throw new DAOException("No se pudo actualizar la imagen");
+            }
+        }
+
+        public ImagenDTO Buscar(int pIdImagen)
+        {
+
+            ImagenDTO imagen = new ImagenDTO();
+            return imagen;
+        }
+
+        public void ListarTodas()
         {
 
         }
