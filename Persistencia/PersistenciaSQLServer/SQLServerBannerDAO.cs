@@ -40,34 +40,46 @@ namespace Persistencia.PersistenciaSQLServer
             }
         }
 
+        //el banner que retorna tiene lista de fecha y fuente nulas
         public List<BannerDTO> Buscar(string pNombre)
         {
             try
             {
                 SqlCommand comando = this.iConexion.CreateCommand();
-                comando.CommandText = "Select * from Banner where Nombre =" + pNombre + "and Estado = true";
+                comando.Transaction = iTransaccion;
+                comando.CommandText = "Select * from Banner where Nombre = '" + pNombre + "' and Estado = true";
                 SqlDataReader registros = comando.ExecuteReader();
                 List<BannerDTO> listaB = new List<BannerDTO>();
                 BannerDTO banner = null;
+                FuenteDTO fuente = null;
+                List<RangoFechaDTO> rangoFecha = null;
                 while (registros.Read())
                 {
-                    //Tengo los id de la fuente y Rango fecha. Tengo que buscarlos
-                    //por id en las tablas para pasarlo en el banner
-                    //registros["Fuente"] esto es el id (int) de la Fuente
-                    banner = new BannerDTO(Convert.ToInt32(registros["IdBanner"]), registros["Nombre"].ToString(), registros["RangoFecha"], registros["Fuente"], Convert.ToBoolean(registros["Estado"]));
-                    listaB.Add(banner)
+                    banner = new BannerDTO(Convert.ToInt32(registros["IdBanner"]), registros["Nombre"].ToString(), rangoFecha, fuente, Convert.ToBoolean(registros["Estado"]));
+                    listaB.Add(banner);
                 }
-
-
-                String nombre = registro["Nombre"].ToString();
-                int id = Convert.ToInt32(registro["IdBanner"]);
-                //List<RangoFechaDTO> rFechas = 
-                //BannerDTO banner = new BannerDTO(id, nombre, );
-                //return banner;
+                return listaB;
             }
             catch (SqlException)
             {
+                throw new DAOException("No se ha podido realizar la búsqueda");
+            }
+        }
 
+        public BannerDTO Buscar(int pIdBanner)
+        {
+            try
+            {
+                SqlCommand comando = this.iConexion.CreateCommand();
+                comando.Transaction = iTransaccion;
+                comando.CommandText = "Select * from Banner where Id =" + pIdBanner + "and Estado = true";
+                BannerDTO banner = comando.ExecuteNonQuery();
+                FuenteDTO fuente = null;
+                List<RangoFechaDTO> rangoFecha = null;
+            }
+            catch (SqlException)
+            {
+                throw new DAOException("No se ha podido realizar la búsqueda");
             }
         }
 
@@ -76,7 +88,9 @@ namespace Persistencia.PersistenciaSQLServer
             try
             {
                 SqlCommand comando = this.iConexion.CreateCommand();
+                comando.Transaction = iTransaccion;
                 comando.CommandText = "Update Banner set Nombre = '"+pBanner.Nombre+"' where IdBanner ="+pBanner.IdBanner;
+                comando.ExecuteNonQuery();
             }
             catch(SqlException)
             {
@@ -89,7 +103,9 @@ namespace Persistencia.PersistenciaSQLServer
             try
             {
                 SqlCommand comando = this.iConexion.CreateCommand();
+                comando.Transaction = iTransaccion;
                 comando.CommandText = "Update Banner set Estado = 'false' where IdBanner = "+pIdBanner;
+                comando.ExecuteNonQuery();
             }
             catch(SqlException)
             {
