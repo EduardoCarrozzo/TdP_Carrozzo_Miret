@@ -9,12 +9,8 @@ namespace DTO
     public class TextoFijoDTO : FuenteDTO
     {
         private string iValor;
-        private int iCodigo;
+        private int iIdTextoFijo;
 
-        public TextoFijoDTO()
-        {
-
-        }
 
         override public string Valor
         {
@@ -22,25 +18,21 @@ namespace DTO
             set { this.iValor = value; }
         }
 
-        public string Texto()
+        public int IIdTextoFijo
         {
-            return this.iValor;
+            get { return this.iIdTextoFijo; }
+            set { this.iIdTextoFijo = value; }
         }
 
 
-        public bool Actualizable()
+        public override bool Actualizable()
         {
             return false;
         }
 
-        public void Actualizar()
-        {
-
-        }
-
         public bool Equals(FuenteDTO other)
         {
-            return (other.GetType() == this.GetType()) && (this.Codigo == other.Codigo);
+            return (other.GetType() == this.GetType()) && (this.iIdFuente == other.iIdFuente);
         }
     }
 }

@@ -9,14 +9,13 @@ namespace DTO
     public abstract class FuenteDTO
     {
 
-        /// <summary>
-        /// Código identificable de la fuente
-        /// </summary>
-        public int Codigo { get; set; }
-        /// <summary>
-        /// Último valor de la fuente
-        /// </summary>
+        public int iIdFuente { get; set; }
+
         public virtual string Valor { get; set; }
+
+        public abstract bool Actualizable();
+
+      //  public abstract void Actualizar(); no es comun a todos los tipos de fuentes
 
     }
 }
