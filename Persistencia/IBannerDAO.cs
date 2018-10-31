@@ -11,6 +11,7 @@ namespace Persistencia
     {
         void Agregar(BannerDTO pBanner);
         List<BannerDTO> Buscar(string pNombre);
+        BannerDTO Buscar(int pIdBanner);
         void Modificar(BannerDTO pBanner);
         void Eliminar(int pIdBanner);
     }
