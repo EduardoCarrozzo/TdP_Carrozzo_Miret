@@ -8,10 +8,10 @@ namespace DTO
 {
     public class ImagenDTO
     {
-        private int iIdImagen;
-        private string iNombre;
-        private byte iHash;
-        private bool iEstado;
+        private int iIdImagen; //id de la imagen
+        private string iNombre; //nombre de la imagen
+        private byte iHash; //hash: codigo numerico que identifica la imagen.
+        private bool iEstado; // para realizar baja logica
 
         public int IdImagen
         {
