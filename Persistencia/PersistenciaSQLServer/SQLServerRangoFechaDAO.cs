@@ -9,7 +9,7 @@ using System.Data;
 
 namespace Persistencia.PersistenciaSQLServer
 {
-	class SQLServerRangoFechaDAO : IRangoFechaDAO
+    class SQLServerRangoFechaDAO : IRangoFechaDAO
     {
         private SqlConnection iConexion;
         private SqlTransaction iTransaccion = null;

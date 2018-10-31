@@ -7,8 +7,8 @@ using DTO;
 
 namespace Persistencia
 {
-	public interface IRangoFechaDAO
-	{
+    public interface IRangoFechaDAO
+    {
         void Agregar(RangoFechaDTO pRangoFecha);
         void Eliminar(int pIdRangoFecha);
         RangoFechaDTO Buscar(int pIdRangoFecha);

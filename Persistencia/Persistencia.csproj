@@ -48,11 +48,13 @@
     <Compile Include="ICampaniaDAO.cs" />
     <Compile Include="IFuenteDAO.cs" />
     <Compile Include="IImagenDAO.cs" />
+    <Compile Include="IRangoFechaDAO.cs" />
     <Compile Include="PersistenciaSQLServer\SQLServerBannerDAO.cs" />
     <Compile Include="PersistenciaSQLServer\SQLServerCampaniaDAO.cs" />
     <Compile Include="PersistenciaSQLServer\SQLServerDAOFactory.cs" />
     <Compile Include="PersistenciaSQLServer\SQLServerFuenteDAO.cs" />
     <Compile Include="PersistenciaSQLServer\SQLServerImagenDAO.cs" />
+    <Compile Include="PersistenciaSQLServer\SQLServerRangoFechaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
