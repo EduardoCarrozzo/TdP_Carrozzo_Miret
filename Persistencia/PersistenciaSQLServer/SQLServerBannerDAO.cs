@@ -27,7 +27,7 @@ namespace Persistencia.PersistenciaSQLServer
             try
             {
                 SqlCommand comando = this.iConexion.CreateCommand();
-                comando.CommandText = "Insert into Banner(Nombre, Estado, Fuente) values(@pNombre, @pEstado, @pFuente)";
+                comando.CommandText = "Insert into Banner(Nombre, Estado, Fuente) values(@pNombre, @pEstado, @pFuente);";
                 comando.Parameters.AddWithValue("@pNombre", pBanner.Nombre);
                 comando.Parameters.AddWithValue("@Estado", pBanner.Estado);
                 comando.Parameters.AddWithValue("@Fuente", pBanner.Fuente);
@@ -43,13 +43,24 @@ namespace Persistencia.PersistenciaSQLServer
         //el banner que retorna tiene lista de fecha y fuente nulas
         public List<BannerDTO> Buscar(string pNombre)
         {
+            List<BannerDTO> listaBanners = new List<BannerDTO>();
             try
             {
                 SqlCommand comando = this.iConexion.CreateCommand();
                 comando.Transaction = iTransaccion;
-                comando.CommandText = "Select * from Banner where Nombre = '" + pNombre + "' and Estado = true";
+                comando.CommandText = "Select * from Banner where Nombre = '" + pNombre + "' and Estado = true;";
+                DataTable tabla = new DataTable();
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                adaptador.Fill(tabla);
+                foreach (DataRow fila in tabla.Rows)
+                {
+                    SqlCommand comandoId //revisar
+                }
+
+
+
                 SqlDataReader registros = comando.ExecuteReader();
-                List<BannerDTO> listaB = new List<BannerDTO>();
+                
                 BannerDTO banner = null;
                 FuenteDTO fuente = null;
                 List<RangoFechaDTO> rangoFecha = null;
@@ -58,7 +69,7 @@ namespace Persistencia.PersistenciaSQLServer
                     banner = new BannerDTO(Convert.ToInt32(registros["IdBanner"]), registros["Nombre"].ToString(), rangoFecha, fuente, Convert.ToBoolean(registros["Estado"]));
                     listaB.Add(banner);
                 }
-                return listaB;
+                
             }
             catch (SqlException)
             {
@@ -72,8 +83,8 @@ namespace Persistencia.PersistenciaSQLServer
             {
                 SqlCommand comando = this.iConexion.CreateCommand();
                 comando.Transaction = iTransaccion;
-                comando.CommandText = "Select * from Banner where Id =" + pIdBanner + "and Estado = true";
-                BannerDTO banner = comando.ExecuteNonQuery();
+                comando.CommandText = "Select * from Banner where Id =" + pIdBanner + "and Estado = true;";
+                BannerDTO banner = comando.ExecuteReader();
                 FuenteDTO fuente = null;
                 List<RangoFechaDTO> rangoFecha = null;
             }
